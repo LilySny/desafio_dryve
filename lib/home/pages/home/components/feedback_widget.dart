@@ -20,14 +20,17 @@ class FeedbackWidget extends StatelessWidget {
               color: Color.fromRGBO(0, 0, 0, 1),
               fontWeight: FontWeight.bold),
         ),
-        Text(
-          title,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontWeight: FontWeight.w500,
-            fontFamily: "CircularStd",
-            color: Color.fromRGBO(118, 128, 149, 1),
-            fontSize: 17,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontWeight: FontWeight.w500,
+              fontFamily: "CircularStd",
+              color: Color.fromRGBO(118, 128, 149, 1),
+              fontSize: 17,
+            ),
           ),
         ),
         const SizedBox(
