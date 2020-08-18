@@ -82,15 +82,14 @@ class _HomePageState extends State<HomePage> {
             return Center(
               child: FeedbackWidget(
                 title:
-                    "Não foi possível buscar os dados dos nossos veículos. Por favor verifique sua conexão com a internet.",
+                    "Ocorreu um erro buscar os dados dos nossos veículos. Por favor, verifique sua conexão com a internet.",
               ),
             );
           } else if (_homeStore.isDisconnected && items == null) {
             return const Center(
-              child: Text(
-                "Você está disconectado.",
-                style: TextStyle(fontSize: 16),
-              ),
+              child: FeedbackWidget(
+                title: "Não foi possível buscar os dados dos nossos veículos. Por favor, verique sua conexão com a internet.",
+              )
             );
           } else if (items == null) {
             return const Center(
