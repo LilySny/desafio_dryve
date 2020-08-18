@@ -45,8 +45,11 @@ class _VehicleCardState extends State<VehicleCard> {
   }
 
   void _showSnackBar(String text, IconData iconData, Color color) {
+    Scaffold.of(context).removeCurrentSnackBar();
+
     Scaffold.of(context).showSnackBar(
       SnackBar(
+        duration: const Duration(milliseconds: 1500),
         backgroundColor: color,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
